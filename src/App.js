@@ -1,10 +1,20 @@
 import React from "react";
-import HomePage from "./components/pages/HomePage";
+import Product from "./components/Product/Product";
+import Navbar from '../src/components/Navbar'
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div>
-      <HomePage/>
+
+      <Navbar/>
+
+      {/*<HomePage/>*/}
+
+      <Product/>
+
+      <Footer/>
+
     </div>
   );
 }

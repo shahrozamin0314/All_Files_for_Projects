@@ -1,5 +1,19 @@
+/*
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+*/
 'use client'
-import React from 'react'
+
 import { Fragment, useState } from 'react'
 import {
   Dialog,
@@ -140,11 +154,11 @@ const navigation = {
   ],
 }
 
-export default function Navbar() {
+export default function Example() {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="bg-white z-50">
+    <div className="bg-white">
       {/* Mobile menu */}
       <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
         <DialogBackdrop

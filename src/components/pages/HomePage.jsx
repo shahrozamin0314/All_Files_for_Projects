@@ -3,7 +3,7 @@ import Navbar from '../Navbar'
 import MainCarosel from '../mainCarosel/MainCarosel'
 import HomeSectionGarosel from '../HomeSectionCard/HomeSectionGarosel'
 import { mens_kurta } from '../data/Men/men_kurta';
-import Footertest from '../Footer/Footertest';
+import Footer from '../Footer/Footer';
 
 const HomePage = () => {
   return (
@@ -20,7 +20,7 @@ const HomePage = () => {
       <HomeSectionGarosel data={mens_kurta} sectionName={"Women Dress"}/>
       
     </div>
-    <Footertest/>
+    <Footer/>
 
     </div>
   )
