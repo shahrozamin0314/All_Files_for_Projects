@@ -8,6 +8,8 @@ import Button from '@mui/material/Button';
 import { Grid } from '@material-ui/core';
 import ProductReviewCard from './ProductReviewCard';
 import { Box, LinearProgress } from '@mui/material';
+import { mens_kurta } from '../data/Men/mens_kurta';
+import HomeSectionCard from '../HomeSectionCard/HomeSectionCard';
 
 const product = {
     name: 'Basic Tee 6-Pack',
@@ -40,7 +42,7 @@ const product = {
         { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
         { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
     ],
-    sizes: [   
+    sizes: [
         { name: 'S', inStock: true },
         { name: 'M', inStock: true },
         { name: 'L', inStock: true },
@@ -150,20 +152,20 @@ export default function ProductDetails() {
                             {/* Reviews */}
                             <div className="mt-6">
                                 <div className='flex items-center space-x-3'>
-                                <Rating name="read-only" value={5.5}readOnly />
-                                <p className='opacity-50 text-sm'>5700 Rating</p>
-                                <p className='ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500'>7300 Review</p>
+                                    <Rating name="read-only" value={5.5} readOnly />
+                                    <p className='opacity-50 text-sm'>5700 Rating</p>
+                                    <p className='ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500'>7300 Review</p>
                                 </div>
                             </div>
 
                             <form className="mt-10">
-                                
+
 
                                 {/* Sizes */}
                                 <div className="mt-10">
                                     <div className="flex items-center justify-between">
                                         <h3 className="text-sm font-medium text-gray-900">Size</h3>
-                                        
+
                                     </div>
 
                                     <fieldset aria-label="Choose a size" className="mt-4">
@@ -211,7 +213,7 @@ export default function ProductDetails() {
                                     </fieldset>
                                 </div>
 
-                                <Button variant="contained" sx={{px:"2rem", py:"1rem", bgcolor:"#9155fd"}} >
+                                <Button variant="contained" sx={{ px: "2rem", py: "1rem", bgcolor: "#9155fd" }} >
                                     Add to bag
                                 </Button>
                             </form>
@@ -262,7 +264,7 @@ export default function ProductDetails() {
                         <Grid container spacing={7}>
                             <Grid item xs={7}>
                                 <div className="space-y-5">
-                                        {[1,1,1].map((item)=> <ProductReviewCard/> )}
+                                    {[1, 1, 1].map((item) => <ProductReviewCard />)}
                                 </div>
                             </Grid>
 
@@ -270,7 +272,7 @@ export default function ProductDetails() {
                                 <h1 className='text-xl font-semibold pb-2'>Product Ratings</h1>
 
                                 <div className='flex items-center space-x-3'>
-                                    <Rating value={4.5} readOnly precision={.5}/>
+                                    <Rating value={4.5} readOnly precision={.5} />
                                     <p className='opacity-60'>54890 Ratings</p>
                                 </div>
 
@@ -281,7 +283,7 @@ export default function ProductDetails() {
                                             <p>Excellent</p>
                                         </Grid>
                                         <Grid item xs={7}>
-                                            <LinearProgress sx={{bgcolor:"#d0d0d0", borderRadius:4, height:7, marginTop:1}} variant='determinate' value={90} color='success'/>
+                                            <LinearProgress sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7, marginTop: 1 }} variant='determinate' value={90} color='success' />
                                         </Grid>
                                     </Grid>
 
@@ -290,7 +292,7 @@ export default function ProductDetails() {
                                             <p>VeryGood</p>
                                         </Grid>
                                         <Grid item xs={7}>
-                                            <LinearProgress sx={{bgcolor:"#d0d0d0", borderRadius:4, height:7, marginTop:1}} variant='determinate' value={80} color='success'/>
+                                            <LinearProgress sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7, marginTop: 1 }} variant='determinate' value={80} color='success' />
                                         </Grid>
                                     </Grid>
 
@@ -299,7 +301,7 @@ export default function ProductDetails() {
                                             <p>Good</p>
                                         </Grid>
                                         <Grid item xs={7}>
-                                            <LinearProgress sx={{bgcolor:"#d0d0d0", borderRadius:4, height:7, marginTop:1}} variant='determinate' value={60} color='success'/>
+                                            <LinearProgress sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7, marginTop: 1 }} variant='determinate' value={60} color='success' />
                                         </Grid>
                                     </Grid>
 
@@ -308,7 +310,7 @@ export default function ProductDetails() {
                                             <p>Average</p>
                                         </Grid>
                                         <Grid item xs={7}>
-                                            <LinearProgress sx={{bgcolor:"#d0d0d0", borderRadius:4, height:7, marginTop:1}} variant='determinate' value={40} color='warning'/>
+                                            <LinearProgress sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7, marginTop: 1 }} variant='determinate' value={40} color='warning' />
                                         </Grid>
                                     </Grid>
 
@@ -317,18 +319,29 @@ export default function ProductDetails() {
                                             <p>Poor</p>
                                         </Grid>
                                         <Grid item xs={7}>
-                                            <LinearProgress sx={{bgcolor:"#d0d0d0", borderRadius:4, height:7, marginTop:1}} variant='determinate' value={35} color='error'/>
+                                            <LinearProgress sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7, marginTop: 1 }} variant='determinate' value={35} color='error' />
                                         </Grid>
                                     </Grid>
 
                                 </Box>
                             </Grid>
 
-                        </Grid>           
+                        </Grid>
                     </div>
                 </section>
 
                 {/* Similar Products */}
+
+                <section className='pt-10'>
+
+                    <h1 className='py-5 text-xl font-bold'>Similar Products</h1>
+
+                    <div className='flex flex-wrap space-y-5'>
+                        {mens_kurta.map((item)=><HomeSectionCard products={item} />)}               
+                    </div>
+
+                </section>
+
             </div>
         </div>
     )
