@@ -3,6 +3,7 @@ import Navbar from '../src/components/Navbar'
 import Footer from "./components/Footer/Footer";
 import Cart from "./components/cart/Cart";
 import Checkout from "./components/CheckOut/Checkout";
+import Order from "./components/Order/Order";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
       {/*<Product/>*/}
       {/*<ProductDetails/>*/}
       {/*<Cart/>*/}
-  
-      <Checkout/>
+      {/*<Checkout/>*/}
+      <Order/>
+      
 
     <div>
       <Footer/>
