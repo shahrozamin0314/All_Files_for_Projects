@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
+import OrderCard from './OrderCard'
 
 const orderStatus = [
     { lable: "On The Way", value: "on_the_way" },
@@ -31,8 +32,8 @@ const Order = () => {
                     </div>
                 </Grid>
 
-                <Grid item>
-                    <div></div>
+                <Grid item xs={9}>
+                    <OrderCard/>  
                 </Grid>
 
             </Grid>
