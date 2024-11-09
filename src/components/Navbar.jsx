@@ -1,17 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
 'use client'
 
 import { Fragment, useState } from 'react'
@@ -154,7 +140,7 @@ const navigation = {
   ],
 }
 
-export default function Example() {
+export default function Navigation() {
   const [open, setOpen] = useState(false)
 
   return (

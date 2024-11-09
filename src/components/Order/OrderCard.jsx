@@ -1,9 +1,10 @@
 import { Grid } from '@material-ui/core'
 import React from 'react'
+import AdjustIcon from '@mui/icons-material/Adjust';
 
 const OrderCard = () => {
     return (
-        <div>
+        <div className='p-5 shadow-md hover:shadow-2xl border' >
             <Grid container spacing={2} sx={{ justifyContent: "space-between" }}>
                 <Grid item xs={6}>
                     <div className='flex cursor-pointer'>
@@ -21,9 +22,13 @@ const OrderCard = () => {
                 </Grid>
 
                 <Grid item xs={4}>
-                    {true && <p>
-                        <span>Delivered on march 02</span>
-                    </p>}
+                    {true && <div>
+                        <p>
+                            <AdjustIcon sx={{ width: "15px", height: "15px" }} className='text-green-600 mr-2 text-sm' />
+                            <span>Delivered on march 02</span>
+                        </p>
+                        <p className='text-xs'>Your item has been delivered</p>
+                    </div> }
 
                     {false && <p>
                         <span>Delivered on march 02</span>
