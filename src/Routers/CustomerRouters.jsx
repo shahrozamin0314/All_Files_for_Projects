@@ -5,13 +5,12 @@ import Cart from '../components/cart/Cart'
 import Navbar from "../components/Navbar"
 import Product from '../components/Product/Product'
 import Footer from '../components/Footer/Footer'
-import Navigation from '../components/Navbar'
 
 const CustomerRouters = () => {
   return (
     <div>
         <div>
-            <Navigation/>
+            <Navbar/>
         </div>
 
         <Routes>
